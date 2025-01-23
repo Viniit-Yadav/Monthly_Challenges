@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+
+{% block page_title %}
+         {{dates}}_challenge
+{% endblock  %}
+
+
+{% block content %}
+    {% include "challenges/includes/header.html" %}
+    <h1>{{dates|title}}</h1>
+    {% if text is not None %}
+        <h2>{{text}}</h2>
+    {% else %}
+        <p> No colour for this month </p>
+    {% endif %}
+{% endblock  %}
